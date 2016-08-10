@@ -7,24 +7,30 @@ module.exports = function (){
     var dataDir = './pokeData';
     var pokemonDataDirPath = dataDir + '/pokemon';
     var pokemonMoveDirPath = dataDir + '/move';
+    var DataTypes = {
+        pokemon: "pokemon",
+        move: "move"
+    };
     
     return {
+        DataTypes: DataTypes,
         pokedexResUrl : serverAddr + apiVersion + pokedexRes,
         dataDirPath : dataDir,
-        pokemonDataDirPath : pokemonDataDirPath,
-        pokemonMoveDirPath : pokemonMoveDirPath,
+        getDirPath : (dataType) => {
+            return dataDir + '/' + dataType;
+        },
         pokemonIndicesFilePath : dataDir + '/pokedex.json',
-        getPokemonDataFilePathUsingId : function(id) {
-            return pokemonDataDirPath + '/' + id + '.json';
+        
+        getFilePathUsingDataTypeAndId : function(dataType, id) {
+            return dataDir + '/' + dataType + '/' + id + '.json';
         },
-        getPokemonMoveFilePathUsingId : function(id) {
-            return pokemonMoveDirPath + '/' + id + '.json';
+
+        getUrlUsingDataTypeAndId : function(dataType, id) {
+            return serverAddr + apiVersion + '/' + dataType + '/' + id;
         },
-        getPokemonUrlUsingId : function(id) {
-            return serverAddr + apiVersion + pokemonRes + "/" + id;
-        },
-        getMoveUrlUsingId : function(id) {
-            return serverAddr + apiVersion + '/move/' + id;
+
+        getObjectIdsFilePath : function(dataType) {
+            return dataDir + '/' + dataType + '/objectIds'; 
         },
         serverAddr: serverAddr
     };

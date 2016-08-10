@@ -50,9 +50,7 @@ module.exports = function() {
                 }
             });
 
-            return deferred.promise.then(null, function(err) {
-                console.log(err);
-            });
+            return deferred.promise;
         },
 
         createDir : function(filePath) {

@@ -1,7 +1,6 @@
 //create a file call parseConfig.json and 
 //put the App ID with property name called "appId" and server address with the name called "serverAddr"
-parseConfig = require('./parseConfig.json');
-console.log(parseConfig.appId);
+var parseConfig = require('./parseConfig.json');
 
 var Parse = require('parse/node');
 Parse.initialize(parseConfig.appId);
