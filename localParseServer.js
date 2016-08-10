@@ -15,7 +15,7 @@ fs.mkdir(DBDir, function(err) {
         mongodb(
             {
                 port: dbPort, 
-                dbpath: DBDir + process.env.JOB_ID + '_standalone'
+                dbpath: DBDir + '_standalone'
             }, 
             function(err) {
                 if(err) return console.error('Error QAQ:', err);
