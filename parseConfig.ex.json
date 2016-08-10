@@ -1,0 +1,5 @@
+{
+    "appId" : "d41d8cd98f00b204e9800998ecf8427e",
+    "masterKey" : "2a5af3ba465feb52932f8acb807d51aa",
+    "serverAddr" : "http://localhost:1337/parse"
+}

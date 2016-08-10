@@ -2,6 +2,7 @@
 crawl json data from pokeapi.co and upload part of the data to parse server
 
 you need to create a file called parseConfig.json before run the app.js
+There is a template called parseConfig.ex.json you can use it.
 Also, I put a localParseServer script so you can host a local Parse server for testing.
 
 pokeapi: http://pokeapi.co/
