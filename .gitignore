@@ -39,6 +39,7 @@ jspm_packages
 
 #config
 parseConfig.json
+dbConfig.json
 
 objectIds
 MongoDB/*
