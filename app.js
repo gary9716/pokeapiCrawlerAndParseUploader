@@ -303,7 +303,9 @@ utils.createDir(config.dataDirPath) //create dir in order
                         (idObjs) => {
                             objIdDict[config.DataTypes.move] = idObjs;
                         },
-                        null
+                        (error) => {
+                            console.log('not exist');
+                        }
                     );
         })
         .then(() => {
@@ -312,7 +314,9 @@ utils.createDir(config.dataDirPath) //create dir in order
                         (idObjs) => {
                             objIdDict[config.DataTypes.pokemon] = idObjs;
                         },
-                        null
+                        (error) => {
+                            console.log('not exist');
+                        }
                     );
         })
         .then(startToFetchData)
